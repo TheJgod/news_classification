@@ -1,17 +1,12 @@
 # News Classification
 
-News Classification is a Streamlit application that allows users to fetch, classify, and analyze news articles based on search terms and user-specific goals. The app leverages AI models to provide goal-oriented recommendations and general news classification.
+News Classification is a Streamlit application that allows users to fetch, classify, and analyze news articles based on search terms and user-specific goals. The app leverages AI models to provide goal-oriented recommendations.
 
 
 ## Features
 
 - Fetch news articles based on user-provided search terms.
-- Optional goal-oriented analysis to retrieve the most relevant articles for a specific user objective.
-- Classify articles into predefined categories:
-  - Collaboration/Partnership
-  - Industry Growth/Trends
-  - Leadership Change
-- Sort articles based on classification scores.
+- Goal-oriented analysis to retrieve the most relevant articles for a specific user objective.
 
 ## Installation
 
@@ -61,12 +56,9 @@ Create a .env file in the project root and add OpenAI API key:
 
 ## Agent Architecture and Decision-Making Process
 
-The system uses two key AI models:
+The system uses:
 
-1. FlagLLMReranker (BAAI/bge-reranker-v2-gemma)
-   - Ranks news articles based on relevance to predefined categories.
-   - Used in classify_news() to compute relevance scores for each category.
-3. OpenAI GPT-4o-mini
+1. OpenAI GPT-4o-mini
    - Processes user goals and retrieves relevant articles.
    - Used in get_relevant_articles() to select articles aligned with user objectives.
 
@@ -75,6 +67,21 @@ The system uses two key AI models:
 ```bash
   poetry run pytest
 ```
+
+## Docker Deployment
+
+Build image:
+
+```bash
+  docker build -t news-classification .
+```
+
+Run:
+
+```bash
+  docker run -p 8501:8501 streamlit -e OPENAI_API_KEY="YOUR_KEY"
+```
+
 
 ## Project Structure
 
@@ -91,6 +98,7 @@ The system uses two key AI models:
 │   └── test_ai_models.py
 └── README.md
 ```
+
 
 
 
