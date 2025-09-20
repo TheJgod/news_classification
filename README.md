@@ -50,9 +50,8 @@ Create a .env file in the project root and add OpenAI API key:
 ### Step 2: Use the Demo
 
 1. Enter a search term to fetch news articles.
-2. Choose whether you have a specific goal.
-3. If a goal is provided, the demo finds relevant articles.
-4. If no goal is provided, the demo classifies articles and allows sorting by category.
+2. Specify a goal.
+3. The demo finds relevant articles.
 
 ## Agent Architecture and Decision-Making Process
 
@@ -98,6 +97,7 @@ Run:
 │   └── test_ai_models.py
 └── README.md
 ```
+
 
 
 
