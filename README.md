@@ -1,3 +1,5 @@
+{"schemaVersion":1,"label":"tests","message":"3 passed","color":"brightgreen"}
+
 # News Classification
 
 News Classification is a Streamlit application that allows users to fetch, classify, and analyze news articles based on search terms and user-specific goals. The app leverages AI models to provide goal-oriented recommendations.
@@ -97,6 +99,7 @@ Run:
 │   └── test_ai_models.py
 └── README.md
 ```
+
 
 
 
