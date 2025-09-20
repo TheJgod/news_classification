@@ -1,0 +1,25 @@
+[project]
+name = "news-classification"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "TheOneJoao",email = "joao.silva.unique@gmail.com"}
+]
+readme = "README.md"
+requires-python = "==3.12.8"
+dependencies = ["pandas (==2.2.3)", "numpy (==2.2.1)", "openai (==1.59.3)", "feedparser (==6.0.11)", "pyshorteners (==1.0.1)", "flagembedding (==1.3.3)", "python-dotenv (==1.0.1)", "torch (==2.5.1)", "torchaudio (==2.5.1)", "torchvision (==0.20.1)"]
+
+[tool.poetry]
+package-mode = false
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+# Prevent SWIG warnings from older package versions
+[tool.pytest.ini_options]
+filterwarnings = [
+  'ignore:.*SwigPyPacked has no __module__ attribute:DeprecationWarning',
+  'ignore:.*SwigPyObject has no __module__ attribute:DeprecationWarning',
+  'ignore:.*swigvarlink has no __module__ attribute:DeprecationWarning',
+]
