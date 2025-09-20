@@ -1,4 +1,4 @@
-{"schemaVersion":1,"label":"tests","message":"3 passed","color":"brightgreen"}
+![Test Status](https://img.shields.io/github/workflow/status/OWNER/REPOSITORY/test?label=tests&style=flat-square)
 
 # News Classification
 
@@ -99,6 +99,7 @@ Run:
 │   └── test_ai_models.py
 └── README.md
 ```
+
 
 
 
