@@ -1,6 +1,6 @@
-# News Classification Demo
+# News Classification
 
-News Classification and Analysis Demo is a Streamlit application that allows users to fetch, classify, and analyze news articles based on search terms and user-specific goals. The app leverages AI models to provide goal-oriented recommendations and general news classification.
+News Classification is a Streamlit application that allows users to fetch, classify, and analyze news articles based on search terms and user-specific goals. The app leverages AI models to provide goal-oriented recommendations and general news classification.
 
 
 ## Features
@@ -91,6 +91,7 @@ The system uses two key AI models:
 │   └── test_ai_models.py
 └── README.md
 ```
+
 
 
 
