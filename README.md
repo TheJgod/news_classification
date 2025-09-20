@@ -79,7 +79,7 @@ Build image:
 Run:
 
 ```bash
-  docker run -p 8501:8501 streamlit -e OPENAI_API_KEY="YOUR_KEY"
+  docker run -p 8501:8501 --env-file .env news-classification
 ```
 
 
@@ -98,6 +98,7 @@ Run:
 │   └── test_ai_models.py
 └── README.md
 ```
+
 
 
 
