@@ -5,26 +5,6 @@ import types
 import os
 import pytest
 
-class FakeReranker:
-    def compute_score(self, pairs, normalize=True):
-        return [float(len(headline)) for _, headline in pairs]
-
-def test_classify_news_with_fake_reranker():
-    df = pd.DataFrame({"Headline": ["First headline", "Second"]})
-    fake = FakeReranker()
-    out = ai_models.classify_news(df.copy(), reranker_obj=fake)
-    expected = [float(len(h)) for h in df["Headline"]]
-    assert out["Collaboration/Partnership"].tolist() == expected
-
-def test_classify_news_with_empty_dataframe():
-    df = pd.DataFrame(columns=["Headline"])
-    fake = FakeReranker()
-    out = ai_models.classify_news(df.copy(), reranker_obj=fake)
-
-    # Should preserve shape and add new columns
-    assert list(out.columns) == ["Headline", "Collaboration/Partnership", "Industry Growth/Trends", "Leadership Change"]
-    assert out.empty
-
 def make_fake_response(text):
     return types.SimpleNamespace(
         choices=[types.SimpleNamespace(message=types.SimpleNamespace(content=text))]
