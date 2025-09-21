@@ -1,4 +1,3 @@
-# tests/test_ai_models_di.py
 import pandas as pd
 import src.news_classification.ai_models as ai_models
 import types
