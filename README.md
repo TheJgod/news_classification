@@ -2,11 +2,18 @@
 
 News Classification is a Streamlit application that allows users to fetch, classify, and analyze news articles based on search terms and user-specific goals. The app leverages AI models to provide goal-oriented recommendations.
 
-
 ## Features
 
 - Fetch news articles based on user-provided search terms.
 - Goal-oriented analysis to retrieve the most relevant articles for a specific user objective.
+
+## Agent Architecture and Decision-Making Process
+
+The system uses:
+
+1. OpenAI GPT-4o-mini
+   - Processes user goals and retrieves relevant articles.
+   - Used in get_relevant_articles() to select articles aligned with user objectives.
 
 ## Installation
 
@@ -53,14 +60,6 @@ Create a .env file in the project root and add OpenAI API key:
 2. Specify a goal.
 3. The demo finds relevant articles.
 
-## Agent Architecture and Decision-Making Process
-
-The system uses:
-
-1. OpenAI GPT-4o-mini
-   - Processes user goals and retrieves relevant articles.
-   - Used in get_relevant_articles() to select articles aligned with user objectives.
-
 ## Running Tests
 
 ```bash
@@ -97,6 +96,7 @@ Run:
 │   └── test_ai_models.py
 └── README.md
 ```
+
 
 
 
